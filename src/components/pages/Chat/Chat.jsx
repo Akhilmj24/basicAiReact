@@ -39,14 +39,14 @@ export default function Chat() {
   useEffect(() => {
     if (isnewMsg) {
       const data = {
-        message: message,
+        message: chatLog.map((message) => message.message).join(""),
         model: AiModel,
       };
       ChatAiSession(data, setchatLog, chatLog, setisloading);
       setisnewMsg(false);
       setmessage("");
     }
-  }, [isnewMsg,AiModel,chatLog,message]);
+  }, [isnewMsg, AiModel, chatLog, message]);
 
   useEffect(() => {
     toBottom();
@@ -99,7 +99,7 @@ export default function Chat() {
         <div className="col-md-8 p-2">
           <div className="chatMessageSection">
             <div className="messageViewSection" ref={bottomRef}>
-              <h6 className="p-3">{AiModelName}</h6>
+              <h6 className="p-3">{AiModelName} (chat with AI )</h6>
               {chatLog?.map((message) => (
                 <div
                   key={message.message}

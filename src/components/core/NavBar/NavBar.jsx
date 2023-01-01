@@ -11,7 +11,7 @@ export default function NavBar() {
       <div className="container-fluid navbarres">
         <div className="navlogoSection">
           <h2 className="navbar-brand" href="/">
-            myAi
+            myAi <span>(beta)</span>
           </h2>
           <button
             className="navbar-togglercus"

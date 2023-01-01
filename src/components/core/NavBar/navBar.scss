@@ -3,6 +3,11 @@ nav {
   .navbar-brand {
     color: $text-color !important;
     font-family: "Orbitron", sans-serif;
+    span {
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      font-family: "Roboto", sans-serif;
+    }
   }
   .navbar-togglercus {
     display: none;

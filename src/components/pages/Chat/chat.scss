@@ -1,0 +1,145 @@
+@import "../../../index.scss";
+.mainChatConatiner {
+  .chatModelSection {
+    background: $secondary-color;
+    max-height: calc(100vh - 130px);
+    overflow: scroll;
+    overflow-x: hidden;
+    border-radius: 0.8rem;
+    .modelView {
+      padding: 1rem;
+      .modelimgConatiner {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: $basicbox-shadow;
+        cursor: pointer;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .modeltextConatiner {
+        max-width: 80%;
+        color: $text-color;
+        section {
+          cursor: pointer;
+          h6 {
+            font-size: $largefont-size;
+            font-weight: 700;
+          }
+          small {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  .chatMessageSection {
+    background: $secondary-color;
+    height: calc(100vh - 130px);
+    border-radius: 0.8rem;
+    position: relative;
+    overflow: hidden;
+
+    .messageViewSection {
+      height: calc(100vh - 200px);
+      overflow: scroll;
+      overflow-x: hidden;
+      padding-bottom: 10px;
+
+      .messageTypeCheck {
+        display: flex;
+        padding: 0 5px;
+        .messageContent {
+          background: #4d426dea;
+          width: 55%;
+          border-radius: 1.5rem 1.5rem 1.5rem 0;
+          box-shadow: 5px 3px 5px 0px rgba(0, 0, 0, 0.075);
+          margin: 0.5rem 0;
+          color: white;
+        }
+      }
+      .senterText {
+        justify-content: end;
+        .messageContent {
+          color: $text-color;
+          background: #ebf1fdea;
+          border-radius: 1.5rem 1.5rem 0rem 1.5rem;
+        }
+      }
+    }
+    .messageSentSection {
+      border-top: 1px solid gainsboro;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      input {
+        width: 93%;
+        border-radius: 1rem;
+        border: 0.5px solid gainsboro;
+        padding: 2px 12px;
+      }
+      button {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        background: $light-color;
+        border: none;
+        text-align: center;
+        i {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+  .chatModelSection {
+    display: flex;
+    overflow: scroll !important;
+    overflow-y: hidden;
+    .modeltextConatiner {
+      display: none;
+    }
+  }
+  .messageContent {
+    width: 80% !important;
+  }
+  .messageSentSection {
+    input {
+      width: 80% !important;
+      margin-right: 10px;
+    }
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 600px) {
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
+  .modeltextConatiner {
+    width: 60% !important;
+    h6 {
+      font-size: $mediumfont-size !important;
+    }
+    small {
+      font-size: $smallfont-size !important;
+      font-weight: 600;
+    }
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .modeltextConatiner {
+    width: 80% !important;
+  }
+}

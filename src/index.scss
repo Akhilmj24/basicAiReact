@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+$primaryBackground-color: #f5f7fb;
+$secondary-color: #ffffff;
+$light-color: #3ba58b;
+$text-color: #333333;
+
+$headingfont-size: 2rem;
+$largefont-size: 1.3rem;
+$mediumfont-size: 1rem;
+$smallfont-size: 0.8rem;
+
+$zindex-dropdown: 1000;
+$zindex-sticky: 1020;
+$zindex-fixed: 1030;
+$zindex-modal-backdrop: 1040;
+$zindex-offcanvas: 1050;
+$zindex-modal: 1060;
+$zindex-popover: 1070;
+$zindex-tooltip: 1080;
+
+$basicbox-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.158);
+
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap");
+body {
+  font-family: -apple-system, "Nunito", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $primaryBackground-color;
+  scroll-behavior: smooth;
+}
+
+.clearBtn {
+  border-radius: 4rem;
+  background: $secondary-color;
+  padding: 5px 15px;
+  border: none;
+  color: $text-color;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.158);
+  cursor: pointer;
+}
+
+.load div {
+  width: 18px;
+  height: 18px;
+  background-color: $light-color;
+  border-radius: 50%;
+  margin: 0px 5px;
+  animation: up-and-down 0.8s infinite alternate;
+  //   animation-name: up-and-down;
+  //   animation-duration: 0.8s;
+  //   animation-iteration-count: infinite;
+  //   animation-direction: alternate;
+}
+.load .two {
+  animation-delay: 0.3s;
+}
+.load .three {
+  animation-delay: 0.6s;
+}
+
+@keyframes up-and-down {
+  to {
+    opacity: 0.2;
+    transform: translateY(-20px);
+  }
+}

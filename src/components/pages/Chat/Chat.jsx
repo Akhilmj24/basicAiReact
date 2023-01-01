@@ -51,9 +51,7 @@ export default function Chat() {
   useEffect(() => {
     toBottom();
   }, [isloading]);
-  useEffect(() => {
-    // getModel(setlistAi);
-  }, []);
+
   const clearChat = () => {
     setchatLog([]);
   };

@@ -46,7 +46,7 @@ export default function Chat() {
       setisnewMsg(false);
       setmessage("");
     }
-  }, [isnewMsg]);
+  }, [isnewMsg,AiModel,chatLog,message]);
 
   useEffect(() => {
     toBottom();
